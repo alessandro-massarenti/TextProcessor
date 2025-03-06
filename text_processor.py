@@ -51,6 +51,10 @@ class TextProcessor:
         result = cursor.fetchone()[0]
         return result
 
+    def ingest_conversation(self, messages: list[str]) -> None:
+
+        raise NotImplementedError()
+
 
 if __name__ == '__main__':
     conn = psycopg2.connect(
