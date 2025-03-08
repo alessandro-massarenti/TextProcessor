@@ -11,7 +11,7 @@ class Text:
         self.__text_preprocessor = text_processor
 
     def append_phrase(self, text: str) -> None:
-        self.__text.append(self.__text_preprocessor.chunked_text(text))
+        self.__text.extend(self.__text_preprocessor.chunked_text(text))
 
     def translate(self):
         full_text = " ".join(self.__text)
